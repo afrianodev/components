@@ -7,6 +7,7 @@ export default function Header({buttonSelected}) {
         <div className="w-[150px] p-2 bg-gray-200 hover:bg-gray-300 active:bg-gray-500 rounded-md text-center font-bold text-gray-700 active:text-gray-200 select-none cursor-pointer" onClick={()=> buttonSelected('Calculators')}>Calculators</div>
         <div className="w-[150px] p-2 bg-gray-200 hover:bg-gray-300 active:bg-gray-500 rounded-md text-center font-bold text-gray-700 active:text-gray-200 select-none cursor-pointer text-sm" onClick={()=> buttonSelected('RockPaperScissors')}>Rock Paper Scissors</div>
         <div className="w-[150px] p-2 bg-gray-200 hover:bg-gray-300 active:bg-gray-500 rounded-md text-center font-bold text-gray-700 active:text-gray-200 select-none cursor-pointer" onClick={()=> buttonSelected('TicTacToe')}>Tic Tac Toe</div>
+        <div className="w-[150px] p-2 bg-gray-200 hover:bg-gray-300 active:bg-gray-500 rounded-md text-center font-bold text-gray-700 active:text-gray-200 select-none cursor-pointer" onClick={()=> buttonSelected('Slider')}>Sliders</div>
     </div>
     <div className="h-[2px] w-[90%] bg-gray-600 rounded-xl mx-auto mt-4"></div>
     </>)

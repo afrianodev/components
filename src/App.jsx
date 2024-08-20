@@ -5,6 +5,7 @@ import RandomQuotesWrapper from "./components/RandomQuotesWrapper/RandomQuotesWr
 import RockPaperScissorsWrapper from "./components/RockPaperScissorsWrapper/RockPaperScissorsWrapper"
 import TicTacToeWrapper from "./components/TicTacToeWrapper/TicTacToeWrapper"
 import CalculatorWrapper from "./components/CalculatorWrapper/CalculatorWrapper"
+import SliderScrollWrapper from "./components/SliderScrollWrapper/SliderScrollWrapper"
 
 function App() {
   const [activeComponent, setActiveComponent] = useState('todolist');
@@ -21,6 +22,8 @@ function App() {
             return <RockPaperScissorsWrapper />;
         case "TicTacToe":
             return <TicTacToeWrapper />;
+        case 'Slider':
+            return <SliderScrollWrapper />
         default:
             return <ToDoListWrapper />;
     }
