@@ -11,7 +11,7 @@ export default function Slider1() {
       keyboard={{
         enabled: true,  // Enable keyboard navigation
     }}
-      onSlideChange={() => console.log('here should be the actual card')}
+      onSlideChange={(e) => console.log(e.realIndex)}
       onSwiper={(swiper) => console.log(swiper)}
       modules={[Keyboard]}
       breakpoints={{

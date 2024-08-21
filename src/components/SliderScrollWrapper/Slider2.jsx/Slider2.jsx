@@ -7,9 +7,9 @@ export default function Slider1() {
     // State to keep track of the active slide index
     const [activeIndex, setActiveIndex] = useState(0);
 
-    const handleSlideChange = (swiper) => {
+    const handleSlideChange = (e) => {
         // Update the active slide index
-        setActiveIndex(swiper.realIndex); // realIndex is used here to correctly track the index with loop
+        setActiveIndex(e.realIndex); // realIndex is used here to correctly track the index with loop
     };
 
     const getCenteredIndex = (slidesPerView) => {
@@ -45,7 +45,7 @@ export default function Slider1() {
                             key={index}
                             className='h-[200px]'
                         >
-                            <div className={`h-[150px] !w-[calc(100%/3 - 50px)] md:!w-[calc(100%/5 - 50px)] text-white transform ${
+                            <div className={`h-[150px] !w-[calc(100%/3 - 50px)] md:!w-[calc(100%/5 - 50px)] mt- text-white transform ${
                                 centeredIndex === index ? 'bg-blue-500 !scale-y-150' : 'bg-black'
                             }`}></div>
                             {slideText}
@@ -54,7 +54,7 @@ export default function Slider1() {
                 })}
             </Swiper>
             <p className='text-xl font-bold mt-4 text-center'>
-                Centered Slide: {activeIndex}
+                Centered Slide: {((activeIndex + Math.floor(5/ 2)) % 6)+1}
             </p>
         </div>
     );
