@@ -18,7 +18,7 @@ export default function Slider1() {
     };
 
     return (
-        <div className='w-[80vw] mx-auto mt-6 h-[200px]'>
+        <div className='w-[80vw] mx-auto mt-6 mb-6 h-[200px]'>
             <Swiper
                 spaceBetween={50}
                 slidesPerView={3} // Default view
@@ -43,17 +43,17 @@ export default function Slider1() {
                     return (
                         <SwiperSlide
                             key={index}
-                            className='h-[200px]'
+                            className='h-[200px] mt-6'
                         >
-                            <div className={`h-[150px] !w-[calc(100%/3 - 50px)] md:!w-[calc(100%/5 - 50px)] mt- text-white transform ${
+                            <div className={`h-[150px] !w-[calc(100%/3 - 50px)] md:!w-[calc(100%/5 - 50px)] text-white transform ${
                                 centeredIndex === index ? 'bg-blue-500 !scale-y-150' : 'bg-black'
                             }`}></div>
-                            {slideText}
+                            <p className='mb-6'>{slideText}</p>
                         </SwiperSlide>
                     );
                 })}
             </Swiper>
-            <p className='text-xl font-bold mt-4 text-center'>
+            <p className='text-xl font-bold text-center mb-6'>
                 Centered Slide: {((activeIndex + Math.floor(5/ 2)) % 6)+1}
             </p>
         </div>
